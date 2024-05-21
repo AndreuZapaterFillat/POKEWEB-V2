@@ -80,19 +80,19 @@ function destapar(id){
 
     //incrementar movimientos
     movimientos++; 
-    mostrarMovimientos.innerHTML =  `Movimiento: ${movimientos}`;
+    mostrarMovimientos.innerHTML =  `Movements: ${movimientos}`;
     if(primerResultado == segundoResultado){
         tarjetasDestapadas = 0; 
 
         //Aumentar aciertos
         aciertos++;
-        mostrarAciertos.innerHTML = `Aciertos: ${aciertos}`;
+        mostrarAciertos.innerHTML = `Correct answers: ${aciertos}`;
         rightAudio.play();
         if(aciertos == 8){
             clearInterval(tiempoRegresivoId); 
-            mostrarAciertos.innerHTML = `Aciertos: ${aciertos}`;
-            mostrarMovimientos.innerHTML = `Movimientos: ${movimientos}`;
-            mostrarTiempo.innerHTML = `Fantastico ${timerInicial - timer} segundos`;
+            mostrarAciertos.innerHTML = `Correct answers: ${aciertos}`;
+            mostrarMovimientos.innerHTML = `Movements: ${movimientos}`;
+            mostrarTiempo.innerHTML = `Fantastic ${timerInicial - timer} seconds`;
             winAudio.play();
         }
     }else{

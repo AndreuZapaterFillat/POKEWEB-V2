@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
 
+html{
+    color: white;
+}
 
 body{
-
-    background: linear-gradient(to bottom, white, rgb(246, 152, 239));
+/*     background: linear-gradient(to bottom, white, rgb(246, 152, 239)); */
     color: #fff;
-    margin: 9%;
+/*     margin: 8.7%; */
     font-family: 'Oxanium', cursive;
-    height: 100%;
 }
 
 main{
@@ -16,6 +17,7 @@ main{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    color: white;
 }
 
 .seccion1,
@@ -26,9 +28,11 @@ main{
     padding: 40px;
     border-radius: 10px;
     text-align: center;
+    color: white;
 }
 
 h1{
+    color: white;
     font-size: 36px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -40,7 +44,7 @@ button{
     height: 100px;
     width: 100px;
     font-size: 40px;
-    color: black;
+    color: white;
     font-weight: bold;
 }
 

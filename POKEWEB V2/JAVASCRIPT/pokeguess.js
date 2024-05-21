@@ -14,7 +14,7 @@ const POKEAPI_POKEMON_LIST_URL = 'https://pokeapi.co/api/v2/pokemon?limit=151';
 const POKEAPI_IMAGE_URL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
 let allPokemonNames = [];
 
-// Function to fetch Pokémon data from PokeAPI
+// Coger nombre mas imagen de la api
 async function fetchPokemonData(pokemonId) {
   const response = await fetch(`${POKEAPI_URL}${pokemonId}`);
   const data = await response.json();
@@ -24,14 +24,14 @@ async function fetchPokemonData(pokemonId) {
   };
 }
 
-// Function to fetch all Pokémon names from PokeAPI
+// Coger nombres de la api
 async function fetchAllPokemonNames() {
   const response = await fetch(POKEAPI_POKEMON_LIST_URL);
   const data = await response.json();
   allPokemonNames = data.results.map(pokemon => pokemon.name);
 }
 
-// Function to get a random list of unique Pokémon IDs
+// Lista aleatoria de ID unicos
 function getRandomPokemonIds(count, maxId) {
   const ids = new Set();
   while (ids.size < count) {
@@ -40,7 +40,7 @@ function getRandomPokemonIds(count, maxId) {
   return [...ids];
 }
 
-// Function to initialize the game
+// Iniciar juego
 const startGame = async () => {
   scoreContainer.classList.add("hide");
   gameContainer.classList.remove("hide");
@@ -51,7 +51,7 @@ const startGame = async () => {
   cardGenerator(finalQuestions[currentQuestion]);
 };
 
-// Timer
+// Tiempo
 const timerDisplay = () => {
   countdown = setInterval(() => {
     count -= 1;
@@ -63,7 +63,7 @@ const timerDisplay = () => {
   }, 1000);
 };
 
-// Function to create options
+// Creador de opciones
 const populateOptions = (correct_option) => {
   let arr = [];
   arr.push(correct_option);
@@ -78,9 +78,9 @@ const populateOptions = (correct_option) => {
   return arr;
 };
 
-// Function to choose random questions
+// Elejir preguntas aleatorias
 const populateQuestions = async () => {
-  const allPokemonIds = getRandomPokemonIds(40, 151); // Original 151 Pokémon
+  const allPokemonIds = getRandomPokemonIds(40, 1024); // Original 151 Pokémon
   const pokemonPromises = allPokemonIds.map(id => fetchPokemonData(id));
   const allPokemonData = await Promise.all(pokemonPromises);
   const questionsCount = 5;
@@ -91,14 +91,14 @@ const populateQuestions = async () => {
   }));
 };
 
-// Random value from array
+// Valor aleatorio del array
 const randomValueGenerator = (array) =>
   array[Math.floor(Math.random() * array.length)];
 
-// Random shuffle array
+// Mezclar
 const randomShuffle = (array) => array.sort(() => 0.5 - Math.random());
 
-// Check selected answer
+// Comprovar respuesta seleccionada
 const checker = (e) => {
   let userSolution = e.target.innerText;
   let options = document.querySelectorAll(".option");

@@ -56,7 +56,7 @@ const fetchPokemon = async (pokemon) => {
 }
 
 const renderPokemon = async (pokemon) => {
-    pokemonNumber.innerHTML = '';
+    /* pokemonNumber.innerHTML = ''; */
     pokemonImage.style.display = 'block';
 
     const data = await fetchPokemon(pokemon);
@@ -125,6 +125,10 @@ const renderPokemon = async (pokemon) => {
         // Establece el color de las barras de progreso y del texto de las estadísticas
         barInners.forEach((barInner, index) => {
             barInner.style.backgroundColor = `rgb(${typeColors['normal'][0]}, ${typeColors['normal'][1]}, ${typeColors['normal'][2]})`;
+        });
+
+        barInners.forEach((barInner) => {
+            barInner.style.width = `100%`;
         });
 
         statDesc.forEach(statDesc => {

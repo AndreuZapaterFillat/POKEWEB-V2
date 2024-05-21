@@ -16,7 +16,9 @@
     border-image-slice: 1;
 }
 
-
+.link:link, :visited, :hover, :active{
+    color: black;
+}
 
 .link{
     font-size: 150%;
