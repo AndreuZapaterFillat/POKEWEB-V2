@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+
+.nav-bar {
+    color: black;
+    font-family: 'Oxanium', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, white, rgb(59, 59, 59), white);
+    border-image-slice: 1;
+}
+
+
+
+.link{
+    font-size: 150%;
+    padding: 10px;
+    text-decoration: none;
+}
+
+/* .link:hover {
+    text-decoration: underline;
+} */
+
+#pokeweb:hover{
+    color: greenyellow;
+}
+
+#pokedex-nav:hover{
+    color: rgb(93, 206, 247);
+}
+
+#pokeguess:hover{
+    color: red;
+}
+
+#pokedle:hover{
+    color: orange;
+}
+
+#pokecards:hover{
+    color: rgb(240, 107, 216);
+}

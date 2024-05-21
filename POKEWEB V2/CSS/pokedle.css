@@ -1,0 +1,66 @@
+html{
+    background: linear-gradient(to bottom, white, rgb(253, 192, 78));
+    height: 100%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 3%;
+}
+
+hr{
+    width: 500px;
+}
+
+#title{
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: black;
+}
+
+#board{
+    width: 350px;
+    height: 420px;
+    /*background-color: orange;*/
+    margin: 0 auto;
+    margin-top: 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile{
+    /* Box */
+    border: 2px solid black;
+    width: 60px;
+    height: 60px;
+    margin: 2.5px;
+
+    /* Text */
+    color: black;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.correct{
+    background-color: green;
+    color: white;
+    border-color: white;
+}
+
+
+.present{
+    background-color: burlywood;
+    color: white;
+    border-color: white;
+}
+
+.absent{
+    background-color: gray;
+    color: white;
+    border-color: white;
+}

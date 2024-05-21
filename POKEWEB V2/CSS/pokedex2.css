@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #d6d6d6;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#pokedex {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(116, 203,  72);
+    border-radius: 8px;
+    padding: 2%;
+}
+
+#top {
+    height: 40%;
+    background: url('/ASSETS/IMG/pokeball.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#poke-image-placeholder {
+    display: flex;
+    justify-content: center;
+}
+
+#pokemon-image {
+    height: 165px;
+    transform: translateY(0%);
+}
+
+#data {
+    background-color: white;
+    height: 60%;
+    border-radius: 8px;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#types {
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+}
+
+.type {
+    color: white;
+    padding: 5% 10%;
+    border-radius: 20px;
+    font-size: 80%;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+#data h4 {
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+#stats {
+    width: 90%;
+    font-size: 80%;
+    gap: 60%;
+}
+
+.stat-row {
+    display: flex;
+}
+
+.stat-desc, .stat-number {
+    width: 13%;
+}
+
+.stat-desc {
+    color:  rgb(116, 203, 72);
+    font-weight: bold;
+    text-align: right;
+    margin-right: 2%;
+}
+
+.stat-number {
+    border-left: 1px solid gray;
+    text-align: right;
+    margin-left: 2%;
+}
+
+.stat-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.bar-outer {
+    background-color: rgba(114, 115, 114, 0.3);
+    display: flex;
+    width: 100%;
+    height: 40%;
+    border-radius: 4px;
+}
+
+.bar-inner {
+    background-color: rgb(116, 203, 72);
+    border-radius: 4px;
+}
+
+.base-stats-info {
+    display: flex;
+    gap: 20px; 
+    justify-content: center; 
+}
+

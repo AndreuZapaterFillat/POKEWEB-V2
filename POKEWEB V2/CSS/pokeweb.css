@@ -1,0 +1,134 @@
+html{
+    background: linear-gradient(to bottom, white, #d9e45e);
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Lemon', serif;
+}
+
+.img-container {
+    z-index: -1;
+    height: 300px;
+    position: relative;
+}
+
+.pokeweb-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding-top: 5%;
+    transform: translate(-50%, -50%);
+    max-height: 100%;
+    width: auto;
+}
+
+
+.section-header {
+    display: block;
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+}
+
+section {
+    overflow: hidden;
+    position: relative;
+}
+
+a, a:link, a:visited {
+    color: #212121;
+    text-decoration: none;
+}
+
+.Carousel-slider {
+    height: 560px;
+    position: relative;
+    width: 100%;
+}
+
+.Carousel-slider.fullwidth {
+    height: 500px;
+}
+
+.Carousel-slider.fullwidth .slider-item {
+    height: 480px;
+    line-height: 480px;
+    width: 100%;
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: 0 50%;
+    perspective: 800px !important;
+}
+
+.slider-item {
+    display: none;
+    width: 350px;
+    height: 350px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    cursor: pointer;
+    background-size: 100% 100%; /* Ajusta el tamaño de la imagen al 100% del ancho y alto del contenedor */
+}
+
+/* .slider-item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+
+.indicators {
+    bottom: 0;
+    left: 50%;
+    padding: 0;
+    list-style-type: none;
+    margin: 40px 0 0 -77px;
+    position: absolute;
+}
+
+.indicators li {
+    float: left;
+    height: 16px;
+    margin-right: 8px;
+    text-align: center;
+    width: 16px;
+}
+
+.indicators li:last-child {
+    margin: 0;
+}
+
+.indicators a {
+    background: #fff;
+    border-radius: 8px;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+}
+
+.indicators .active a {
+    background: #f8d326;
+}
+
+.pokemon-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-item img:after {
+    content: attr(alt);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 30px;
+}
